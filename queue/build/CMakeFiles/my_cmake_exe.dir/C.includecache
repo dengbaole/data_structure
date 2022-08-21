@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../INC/Queue.h
+stdio.h
+-
+stdlib.h
+-
+assert.h
+-
+stdbool.h
+-
+
+/media/dengbaole/Elements SE/005-code/数据结构/queue/SRC/Queue.c
+Queue.h
+/media/dengbaole/Elements SE/005-code/数据结构/queue/SRC/Queue.h
+
+/media/dengbaole/Elements SE/005-code/数据结构/queue/SRC/main.c
+Queue.h
+/media/dengbaole/Elements SE/005-code/数据结构/queue/SRC/Queue.h
+

@@ -1,0 +1,1 @@
+/usr/bin/cc -g -rdynamic CMakeFiles/my_cmake_exe.dir/SRC/Stack.c.o CMakeFiles/my_cmake_exe.dir/SRC/main.c.o -o my_cmake_exe 

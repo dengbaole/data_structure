@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../INC/Stack.h
+stdio.h
+-
+stdlib.h
+-
+assert.h
+-
+stdbool.h
+-
+
+/media/dengbaole/Elements SE/005-code/数据结构/stackqueue/SRC/main.c
+Stack.h
+/media/dengbaole/Elements SE/005-code/数据结构/stackqueue/SRC/Stack.h
+

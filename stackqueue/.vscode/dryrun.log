@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/media/dengbaole/Elements SE/005-code/demo'
+make: Leaving directory '/media/dengbaole/Elements SE/005-code/demo'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
