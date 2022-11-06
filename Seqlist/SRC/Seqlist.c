@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "Seqlist.h"
+#include "../INC/Seqlist.h"
 
 
 

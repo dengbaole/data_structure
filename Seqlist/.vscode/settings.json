@@ -41,9 +41,5 @@
     "**/.*/**",
     "**/.vscode",
     "**/.vscode/**"
-  ],
-  "files.associations": {
-    "stdio.h": "c",
-    "seqlist.h": "c"
-  }
+  ]
 }

@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "Seqlist.h"
+#include "../INC/Seqlist.h"
 
 
 
@@ -33,9 +33,8 @@ int main()
 {
 	
 	TestList1();
-	
-	
-	
+	printf("ok\n");
+
 	return 0;
 }
 
