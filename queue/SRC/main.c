@@ -3,9 +3,15 @@
 
 void TestQueue()
 {
-	Queue q;
-	QueueInit(&q);
-	QueuePush(&q,5);
+	Node *Q = initQueue();
+	enQueue(Q, 6);
+	enQueue(Q, 3);
+	enQueue(Q, 3);
+	enQueue(Q, 4);
+	enQueue(Q, 5);
+	printQueue(Q);
+	int data = deQueue(Q);
+	printQueue(Q);
 }
 
 int main()

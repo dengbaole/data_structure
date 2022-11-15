@@ -1,45 +1,77 @@
 #include "Queue.h"
 
-void QueueInit(Queue *pq)
+/// @brief 初始化
+/// @return
+Node *initQueue()
 {
-    assert(pq);
-    pq->head = NULL;
-    pq->tail = NULL;
+    Node *Q = (Node *)malloc(sizeof(Node));
+    Q->data = 0; //用来存储数据的个数
+    Q->next = NULL;
+    return Q;
 }
 
-void QueueDestroy(Queue *pq)
+/// @brief 队列插入数据
+/// @param Q 
+/// @param data 
+void enQueue(Node *Q, int data)
 {
-    assert(pq);
-    QueueNode *cur = pq->head;
-    while(cur!=NULL)
+    Node *q = Q;
+    Node *node = (Node *)malloc(sizeof(Node));
+    node->data = data;
+    for (int i = 0; i < Q->data; i++)
     {
-        QueueNode *next = cur->next;
-        free(cur);
-        cur = next;
+        q = q->next;
     }
-    pq->head = pq->tail = NULL;
+    node->next = q->next;
+    q->next = node;
+    Q->data++;
 }
 
-void QueuePush(Queue *pq, QDataType x)
+/// @brief 队列打印
+/// @param Q 
+void printQueue(Node *Q)
 {
-    assert(pq);
-
-    QueueNode *newnode = (QueueNode *)malloc(sizeof(QueueNode));
-    newnode->data = x;
-    newnode->next = NULL;
-    if (pq->head == NULL)
+    Node *node = Q->next;
+    while (node)
     {
-        pq->head = pq->tail=newnode;
+        printf("%d->", node->data);
+        node = node->next;
+    }
+    printf("NULL\n");
+}
+
+/// @brief 判断队列是否是空
+/// @param Q 
+/// @return 
+int isEmpty(Node* Q)
+{
+    if(Q->data==0||Q->next->data==NULL)
+    {
+        return 1;
     }
     else
     {
-        pq->tail->next=newnode;
-        pq->tail = newnode;
+        return 0;
     }
-
 }
-void QueuePop(Queue *pq);
-QDataType QueueFront(Queue *pq);
-QDataType QueueBack(Queue *pq);
-int QueueSize(Queue *pq);
-bool QueueEmpty(Queue *pq);
+
+/// @brief 队列删除一个数据(先进先出，删除第一个)
+/// @param Q 
+/// @return 
+int deQueue(Node* Q)
+{
+    if(isEmpty(Q))
+    {
+        return -1;
+    }
+    else
+    {
+        Node *node = Q->next;
+        QDataType data = node->data;
+        Q->next = node->next;
+        free(node);
+
+        Q->data--;
+        return data;
+    }
+}
