@@ -1,0 +1,3 @@
+/media/dengbaole/Elements SE/005-code/000_statuy/C/data_structure/list/build/CMakeFiles/my_cmake_exe.dir
+/media/dengbaole/Elements SE/005-code/000_statuy/C/data_structure/list/build/CMakeFiles/edit_cache.dir
+/media/dengbaole/Elements SE/005-code/000_statuy/C/data_structure/list/build/CMakeFiles/rebuild_cache.dir
